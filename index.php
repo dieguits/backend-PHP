@@ -77,11 +77,12 @@ $app->get("/getProvinces/:code",  function ($code) use ($app, $db) {
 				array('code' => 'cun', 'description' => 'Cundinamarca'),
 				array('code' => 'san', 'description' => 'Santander'),
 				array('code' => 'mag', 'description' => 'Magdalena'),
-				array('code' => 'ant', 'description' => 'Antioquia')
+				array('code' => 'ant', 'description' => 'Antioquia'),
+				array('code' => 'boy', 'description' => 'Boyaca')
 			);
 			break;
 
-		case "can":
+		case "cad":
 			$procinces = array(
 				array('code' => 'on', 'description' => 'Ontario'),
 				array('code' => 'que', 'description' => 'Quebec'),
@@ -99,13 +100,27 @@ $app->get("/getProvinces/:code",  function ($code) use ($app, $db) {
 			);
 			break;
 
+		case "ind":
+			$procinces = array(
+				array('code' => 'and', 'description' => 'Andhra Pradesh'),
+				array('code' => 'aru', 'description' => 'Arunachal Pradesh'),
+				array('code' => 'ass', 'description' => 'Assam'),
+				array('code' => 'bih', 'description' => 'Bihar'),
+				array('code' => 'chh', 'description' => 'Chhattisgarh'),
+				array('code' => 'goa', 'description' => 'Goa'),
+				array('code' => 'guy', 'description' => 'Guyarat'),
+				array('code' => 'har', 'description' => 'Haryana'),
+				array('code' => 'him', 'description' => 'Himachal Pradesh')
+			);
+			break;
+
 		default;
 			break;
 	}
 
 	$result = array(
 		'status' => 'success',
-		'code' => 200,
+		'code' => 'Provinces consulted correctly.',
 		'data' => $procinces
 	);
 
