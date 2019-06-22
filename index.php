@@ -68,6 +68,81 @@ $app->get("/getLevelEducation",  function () use ($app, $db) {
 	echo json_encode($result);
 });
 
+$app->get("/getNavitveLanguages",  function () use ($app, $db) {
+
+	$langua = array(
+		array('code' => 'spa', 'description' => 'Spanish'),
+		array('code' => 'eng', 'description' => 'English'),
+		array('code' => 'por', 'description' => 'Portoguse'),
+		array('code' => 'pan', 'description' => 'Pangar'),
+		array('code' => 'fre', 'description' => 'Frech')
+		
+	);
+
+	$result = array(
+		'status' => 'success',
+		'code' => 'Languages consulted correctly',
+		'data' => $langua
+	);
+
+	echo json_encode($result);
+});
+
+$app->get("/getTestList",  function () use ($app, $db) {
+
+	$langua = array(
+		array('code' => 'iel', 'description' => 'IELTS'),
+		array('code' => 'eng', 'description' => 'CELPI'),
+		array('code' => 'por', 'description' => 'TOEFL'),
+		array('code' => 'pan', 'description' => 'I don\'t have')
+		
+	);
+
+	$result = array(
+		'status' => 'success',
+		'code' => 'Languages consulted correctly',
+		'data' => $langua
+	);
+
+	echo json_encode($result);
+});
+
+$app->get("/getAcommodationList",  function () use ($app, $db) {
+
+	$langua = array(
+		array('code' => 'iel', 'description' => 'Homestay (English Speaking Host Family'),
+		array('code' => 'eng', 'description' => 'I don\'n need it'),
+		array('code' => 'por', 'description' => 'House'),
+		array('code' => 'pan', 'description' => 'Appartment')
+		
+	);
+
+	$result = array(
+		'status' => 'success',
+		'code' => 'Languages consulted correctly',
+		'data' => $langua
+	);
+
+	echo json_encode($result);
+});
+
+$app->get("/getYesNoList",  function () use ($app, $db) {
+
+	$langua = array(
+		array('code' => 'yes', 'description' => 'Yes'),
+		array('code' => 'no', 'description' => 'No')
+		
+	);
+
+	$result = array(
+		'status' => 'success',
+		'code' => 'Yes and No list consulted correctly',
+		'data' => $langua
+	);
+
+	echo json_encode($result);
+});
+
 $app->get("/getProvinces/:code",  function ($code) use ($app, $db) {
 
 	switch ($code) {
